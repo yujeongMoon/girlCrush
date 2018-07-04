@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.board.repository.BoardMapper">
+<mapper namespace="com.example.travelboard.repository.TravelMapper">
 	
 	<!-- type="스프링이름" id="별명" -->
 	<!-- <result property="스프링" column="DB이름" /> -->
-	<resultMap type="Board" id="boardResultMap">
+	<resultMap type="TravelBoard" id="TravelResultMap">
 		<result property="id" column="ID" />
 		<result property="writer" column="WRITER" />
 		<result property="title" column="TITLE" />
@@ -16,7 +16,7 @@
 	<!-- insert, update, delete 작업은 영향 받은 로우의 개수를 값을 자동으로 리턴한다. -->
 	<insert id="insert" parameterType="TravelBoard">
 		INSERT INTO travel_board(id, writer, title, content, reg_date, hit_count)
-		VALUES(XBOARD_SEQ.NEXTVAL, #{writer}, #{title}, #{content}, SYSDATE, 0)
+		VALUES(ID_SEQ_TRAVEL.NEXTVAL, #{writer}, #{title}, #{content}, SYSDATE, 0)
 	</insert>
 	
 	<update id="update" parameterType="TravelBoard">
@@ -28,22 +28,21 @@
 	</delete>
 	
 	
-	
-	<select id="selectById" parameterType="long" resultMap="boardResultMap">
+	<select id="selectById" parameterType="long" resultMap="TravelResultMap">
 		SELECT * FROM travel_board WHERE id=#{id}
 	</select>
 	
 	<!-- Collection 처리는 자동으로 지원한다. resultType 자동 바인딩-->
-	<!-- resultType="Board"를 사용할 수 있는 경우 테이블 칼럼 명이 모델 클래스 필드 변수명과 같을 때만 사용가능 
-	<select id="selectByLimit" resultType="TravelBoard">
+	<!-- resultType="Board"를 사용할 수 있는 경우 테이블 칼럼 명이 모델 클래스 필드 변수명과 같을 때만 사용가능--> 
+<!-- 	<select id="selectByLimit" resultType="TravelBoard">
 		<bind name="start" value="@com.example.board.dto.Pager@seekStart(page, size)"/>
 		<bind name="end" value="@com.example.board.dto.Pager@seekEnd(page, size)"/>
 		SELECT * FROM (
 			SELECT ROWNUM AS rnum, b.* FROM (
-				SELECT * FROM xboard ORDER BY id DESC
+				SELECT * FROM travel_board ORDER BY id DESC
 			) b
 		) WHERE rnum &gt;= #{start} and rnum &lt;= #{end}
-	</select>-->
+	</select> -->
 	
 	<update id="increment">
 		UPDATE travel_board SET hit_count=hit_count+1 WHERE id=#{id} and writer!=#{requester}

@@ -1,5 +1,5 @@
 package com.example.web.interceptor;
 
-public class LoginInterceptor {
-
+public class LoginInterceptor{
+	
 }
