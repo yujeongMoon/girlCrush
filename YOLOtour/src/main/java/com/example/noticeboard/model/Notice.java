@@ -1,5 +1,15 @@
 package com.example.noticeboard.model;
 
-public class Notice {
+import java.util.Date;
 
+import lombok.Data;
+
+@Data
+public class Notice {
+	int id; // id(순서)
+	String writer; // 글쓴이
+	String title; // 제목
+	String content; // 내용
+	Date reg_date; // 현재 날짜
+	int hit_count; // 조회수
 }
