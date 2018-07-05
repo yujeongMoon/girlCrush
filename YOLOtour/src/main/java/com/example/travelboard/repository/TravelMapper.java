@@ -24,6 +24,6 @@ public interface TravelMapper {
 	
 	public Travel selectById(long id);
 	public List<Travel> selectByLimit(@Param("page") int page, @Param("size") int size);
-	public int imcrement(@Param("id") long id, @Param("requester") String requester);
+	public int increment(@Param("id") long id, @Param("requester") String requester);
 	
 }

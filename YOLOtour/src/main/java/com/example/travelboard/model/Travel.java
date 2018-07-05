@@ -1,5 +1,7 @@
-// 조가희 : 여행상품화면 Model
+// 조가희 : 여행상품리스트
 // Oracle에 올라와있는 travel_board 테이블 내용을 바탕으로 작성함.
+// Controller클래스에게 요청받은 내용을 가공한다.
+// 데이터가 DB에 있을경우 DB에 요청해서 가져와서 가공한 결과를 다시 Controller에게 보낸다.
 package com.example.travelboard.model;
 
 import java.util.Date;
