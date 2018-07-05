@@ -4,7 +4,7 @@
 	
 	<!-- type="스프링이름" id="별명" -->
 	<!-- <result property="스프링" column="DB이름" /> -->
-	<resultMap type="NoticeBoard" id="NoticeResultMap">
+	<resultMap type="com.example.noticeboard.model.Notice" id="NoticeResultMap">
 		<result property="id" column="ID" />
 		<result property="writer" column="WRITER" />
 		<result property="title" column="TITLE" />
@@ -14,12 +14,12 @@
 	</resultMap>
 	
 	<!-- insert, update, delete 작업은 영향 받은 로우의 개수를 값을 자동으로 리턴한다. -->
-	<insert id="insert" parameterType="NoticeBoard">
+	<insert id="insert" parameterType="com.example.noticeboard.model.Notice">
 		INSERT INTO NOTICE_BOARD(id, writer, title, content, reg_date, hit_count)
 		VALUES(ID_SEQ_NOTICE.NEXTVAL, #{writer}, #{title}, #{content}, SYSDATE, 0)
 	</insert>
 	
-	<update id="update" parameterType="NoticeBoard">
+	<update id="update" parameterType="com.example.noticeboard.model.Notice">
 		UPDATE NOTICE_BOARD SET title=#{title}, content=#{content} WHERE id=#{id}
 	</update>
 	
@@ -34,16 +34,16 @@
 	</select>
 	
 	<!-- Collection 처리는 자동으로 지원한다. resultType 자동 바인딩-->
-	<!-- resultType="Board"를 사용할 수 있는 경우 테이블 칼럼 명이 모델 클래스 필드 변수명과 같을 때만 사용가능 
-	<select id="selectByLimit" resultType="TravelBoard">
-		<bind name="start" value="@com.example.board.dto.Pager@seekStart(page, size)"/>
-		<bind name="end" value="@com.example.board.dto.Pager@seekEnd(page, size)"/>
+	<!-- resultType="Board"를 사용할 수 있는 경우 테이블 칼럼 명이 모델 클래스 필드 변수명과 같을 때만 사용가능 -->
+	<select id="selectByLimit" resultType="com.example.noticeboard.model.Notice">
+		<bind name="start" value="@com.example.Pager@seekStart(page, size)"/>
+		<bind name="end" value="@com.example.Pager@seekEnd(page, size)"/>
 		SELECT * FROM (
 			SELECT ROWNUM AS rnum, b.* FROM (
-				SELECT * FROM xboard ORDER BY id DESC
+				SELECT * FROM NOTICE_BOARD ORDER BY id DESC
 			) b
 		) WHERE rnum &gt;= #{start} and rnum &lt;= #{end}
-	</select>-->
+	</select>
 	
 	<update id="increment">
 		UPDATE NOTICE_BOARD SET hit_count=hit_count+1 WHERE id=#{id} and writer!=#{requester}

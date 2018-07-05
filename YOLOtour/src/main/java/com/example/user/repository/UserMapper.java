@@ -16,7 +16,8 @@ import com.example.user.model.User;
 
 @Mapper
 public interface UserMapper {
-	@Insert("INSERT INTO customer(email, password) VALUES(#{email}, #{password})")
+	
+	@Insert("INSERT INTO customer(id, email, password, travel_id) VALUES(#{id},#{email}, #{password}, #{travelId})")
 	public int insert(User user);
 
 	@Update("UPDATE customer SET password = #{password} WHERE email = #{email}")
@@ -39,4 +40,5 @@ public interface UserMapper {
 			@Result(property = "email", column = "email"),
 			@Result(property = "password", column = "password") })
 	public User selectByEmail(String email);
+	
 }

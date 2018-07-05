@@ -15,15 +15,15 @@ public class Application extends WebMvcConfigurerAdapter{
 		SpringApplication.run(Application.class, args);
 	}
 	
-	@Autowired
+	/*@Autowired
 	private LoginInterceptor loginInterceptor;
 	
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(loginInterceptor)
-		.addPathPatterns("/boards/view/**")
-		.addPathPatterns("/boards/write/**")
-		.addPathPatterns("/boards/update/**")
-		.addPathPatterns("/boards/delete/**");
-	}
+		registry.addInterceptor(loginInterceptor);
+		//.addPathPatterns("/boards/view/**")
+		//.addPathPatterns("/boards/write/**")
+		//.addPathPatterns("/boards/update/**")
+		//.addPathPatterns("/boards/delete/**");
+	}*/
 }

@@ -4,7 +4,7 @@
 	
 	<!-- type="스프링이름" id="별명" -->
 	<!-- <result property="스프링" column="DB이름" /> -->
-	<resultMap type="TravelBoard" id="TravelResultMap">
+	<resultMap type="com.example.travelboard.model.Travel" id="TravelResultMap">
 		<result property="id" column="ID" />
 		<result property="writer" column="WRITER" />
 		<result property="title" column="TITLE" />
@@ -14,12 +14,12 @@
 	</resultMap>
 	
 	<!-- insert, update, delete 작업은 영향 받은 로우의 개수를 값을 자동으로 리턴한다. -->
-	<insert id="insert" parameterType="TravelBoard">
+	<insert id="insert" parameterType="com.example.travelboard.model.Travel">
 		INSERT INTO travel_board(id, writer, title, content, reg_date, hit_count)
 		VALUES(ID_SEQ_TRAVEL.NEXTVAL, #{writer}, #{title}, #{content}, SYSDATE, 0)
 	</insert>
 	
-	<update id="update" parameterType="TravelBoard">
+	<update id="update" parameterType="com.example.travelboard.model.Travel">
 		UPDATE travel_board SET title=#{title}, content=#{content} WHERE id=#{id}
 	</update>
 	
@@ -34,15 +34,15 @@
 	
 	<!-- Collection 처리는 자동으로 지원한다. resultType 자동 바인딩-->
 	<!-- resultType="Board"를 사용할 수 있는 경우 테이블 칼럼 명이 모델 클래스 필드 변수명과 같을 때만 사용가능--> 
-<!-- 	<select id="selectByLimit" resultType="TravelBoard">
-		<bind name="start" value="@com.example.board.dto.Pager@seekStart(page, size)"/>
-		<bind name="end" value="@com.example.board.dto.Pager@seekEnd(page, size)"/>
+ 	<select id="selectByLimit" resultType="com.example.travelboard.model.Travel">
+		<bind name="start" value="@com.example.Pager@seekStart(page, size)"/>
+		<bind name="end" value="@com.example.Pager@seekEnd(page, size)"/>
 		SELECT * FROM (
 			SELECT ROWNUM AS rnum, b.* FROM (
 				SELECT * FROM travel_board ORDER BY id DESC
 			) b
 		) WHERE rnum &gt;= #{start} and rnum &lt;= #{end}
-	</select> -->
+	</select> 
 	
 	<update id="increment">
 		UPDATE travel_board SET hit_count=hit_count+1 WHERE id=#{id} and writer!=#{requester}
