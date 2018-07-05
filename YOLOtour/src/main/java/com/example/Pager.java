@@ -1,5 +1,8 @@
 package com.example;
 
+import lombok.Data;
+
+@Data
 public class Pager {
 	private int page; // current page
 	private int size; // rows per page
