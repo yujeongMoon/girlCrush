@@ -29,20 +29,20 @@ public class LoginController {
 		return "login";
 	}
 	
-//	@GetMapping("/login")
-//	public String postLogin(Login login, Model model, HttpSession session) {
-//		loginService.authenticate(login);
-//		
-//		if (login.getError() != null) {
-//			model.addAttribute("error", login.getError());
-//			model.addAttribute("login", login);
-//			return "login";
-//		} else { 
-//			User user = new User(login.getEmail(), login.getPassword(), 0);
-//			session.setAttribute("user", user);
-//			return "redirect:/home";
-//		}
-//	}       
+	@PostMapping("/login")
+	public String postLogin(Login login, Model model, HttpSession session) {
+		loginService.authenticate(login);
+		
+		if (login.getError() != null) {
+			model.addAttribute("error", login.getError());
+			model.addAttribute("login", login);
+			return "login";
+		} else { 
+			User user = new User(login.getEmail(), login.getPassword(), 0);
+			session.setAttribute("user", user);
+			return "redirect:/";
+		}
+	}       
 	
 	@GetMapping("/logout")
 	public String getLogout(HttpSession session) {

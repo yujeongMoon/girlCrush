@@ -17,7 +17,7 @@ import com.example.user.model.User;
 @Mapper
 public interface UserMapper {
 	
-	@Insert("INSERT INTO customer(id, email, password, travel_id) VALUES(#{id},#{email}, #{password}, #{travelId})")
+	@Insert("INSERT INTO customer(id, email, password) VALUES(ID_SEQ.NEXTVAL, #{email}, #{password})")
 	public int insert(User user);
 
 	@Update("UPDATE customer SET password = #{password} WHERE email = #{email}")
