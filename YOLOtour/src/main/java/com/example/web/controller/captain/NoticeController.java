@@ -35,7 +35,7 @@ public class NoticeController {
 			@RequestParam(name="size", required=false, defaultValue="10") int size,
 			@RequestParam(name="bsize", required=false, defaultValue="5") int bsize) {
 		ModelAndView mav = new ModelAndView("notice_list");
-//		mav.addObject("notices", noticeMapper.selectLimit(page, size));
+		mav.addObject("notices", noticeMapper.selectByLimit(page, size));
 		mav.addObject("pager", new Pager(page, size, bsize, noticeMapper.count()));
 		return mav;
 	}
