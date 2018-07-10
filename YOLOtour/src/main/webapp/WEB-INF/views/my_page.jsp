@@ -16,65 +16,15 @@
 <link rel="stylesheet" href="css/animate.min.css">
 <link rel="stylesheet" href="css/owl.carousel.css">
 <link rel="stylesheet" href="css/main.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
 </head>
 <body>
-	<header id="header">
-	<div class="header-top">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-6 col-sm-6 col-6 header-top-left">
-					<ul>
-						<li><a href="#">Visit Us</a></li>
-						<li><a href="#">Buy Tickets</a></li>
-					</ul>
-				</div>
-				<div class="col-lg-6 col-sm-6 col-6 header-top-right">
-					<div class="header-social">
-						<a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i
-							class="fa fa-twitter"></i></a> <a href="#"><i
-							class="fa fa-dribbble"></i></a> <a href="#"><i
-							class="fa fa-behance"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container main-menu">
-		<div class="row align-items-center justify-content-between d-flex">
-			<div id="logo">
-				<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
-			</div>
-			<nav id="nav-menu-container">
-			<ul class="nav-menu">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="packages.html">Packages</a></li>
-				<li><a href="hotels.html">Hotels</a></li>
-				<li><a href="insurance.html">Insurence</a></li>
-				<li class="menu-has-children"><a href="">Blog</a>
-					<ul>
-						<li><a href="blog-home.html">Blog Home</a></li>
-						<li><a href="blog-single.html">Blog Single</a></li>
-					</ul></li>
-				<li class="menu-has-children"><a href="">Pages</a>
-					<ul>
-						<li><a href="elements.html">Elements</a></li>
-						<li class="menu-has-children"><a href="">Level 2 </a>
-							<ul>
-								<li><a href="#">Item One</a></li>
-								<li><a href="#">Item Two</a></li>
-							</ul></li>
-					</ul></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-			</nav>
-			<!-- #nav-menu-container -->
-		</div>
-	</div>
-	</header>
+	<c:import url="nav_top.jsp"></c:import>
 	<!-- #header -->
-
-
 	<!-- start banner Area -->
 	<section class="about-banner relative">
 	<div class="overlay overlay-bg"></div>
@@ -83,8 +33,8 @@
 			<div class="about-content col-lg-12">
 				<h1 class="text-white">My Page</h1>
 				<p class="text-white link-nav">
-					<a href="index.html">Home </a> <span class="lnr lnr-arrow-right"></span>
-					<a href="about.html"> my page</a>
+					<a href="/">Home </a> <span class="lnr lnr-arrow-right"></span> <a
+						href="/mypage"> my page</a>
 				</p>
 			</div>
 		</div>
@@ -101,32 +51,143 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-4">
+		<div>
 			<div class="single-price">
 				<h4>Cart</h4>
-				<ul class="price-list">
-					<li class="d-flex justify-content-between align-items-center">
-						<span>New York</span> <a href="#" class="price-btn">$1500</a>
-					</li>
-					<li class="d-flex justify-content-between align-items-center">
-						<span>Maldives</span> <a href="#" class="price-btn">$1500</a>
-					</li>
-					<li class="d-flex justify-content-between align-items-center">
-						<span>Sri Lanka</span> <a href="#" class="price-btn">$1500</a>
-					</li>
-					<li class="d-flex justify-content-between align-items-center">
-						<span>Nepal</span> <a href="#" class="price-btn">$1500</a>
-					</li>
-					<li class="d-flex justify-content-between align-items-center">
-						<span>Thiland</span> <a href="#" class="price-btn">$1500</a>
-					</li>
-					<li class="d-flex justify-content-between align-items-center">
-						<span>Singapore</span> <a href="#" class="price-btn">$1500</a>
-					</li>
-				</ul>
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th scope="col">No</th>
+							<th scope="col">Title</th>
+							<th scope="col">Writer</th>
+							<th scope="col">Date</th>
+							<th scope="col">Hits</th>
+						</tr>
+					</thead>
+					<c:forEach items="#{mypageB }" var="mypageb">
+						<tr>
+							<td>${mypageb.id }</td>
+							<td><a
+								href="<c:url value='/travelboards/view/${mypageb.id }'/>">${mypageb.title }</a></td>
+							<td>${mypageb.writer }</td>
+							<td><fmt:formatDate pattern="MM-dd hh:mm"
+									value="${mypageb.regDate }" /></td>
+							<td>${mypageb.hitCount }</td>
+						</tr>
+					</c:forEach>
+				</table>
+
+				<div class="row">
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<ul class="pagination">
+							<c:set var="target" value="boards" />
+							<c:if test="${pager.rows==0 }">
+								<li class="active"><a href="#">1</a></li>
+							</c:if>
+							<c:if test="${pager.rows > 0 }">
+								<c:set var="common"
+									value="size=${pager.size }&bsize=${pager.bsize }" />
+								<c:if test="${pager.bspage > pager.bsize }">
+									<c:set var="home" value="page=1&${common }" />
+									<c:set var="prev" value="page=${pager.bspage-1 }&${common }" />
+									<li><a href="${target }?${home }">Home</a></li>
+									<li><a href='<c:url value="${target }?${prev }"/>'>&laquo;</a></li>
+								</c:if>
+								<c:forEach var="pno" begin="${pager.bspage }"
+									end="${pager.bepage }">
+									<c:if test="${pno==pager.page }">
+										<li class="active"><a href="#">${pno }</a></li>
+									</c:if>
+									<c:if test="${pno!=pager.page }">
+										<c:if test="${pno <= pager.pages }">
+											<c:set var="page" value="page=${pno }&${common }" />
+											<li><a href='<c:url value="${target }?${page }"/>'>${pno }</a></li>
+										</c:if>
+									</c:if>
+								</c:forEach>
+								<c:if test="${pager.bepage < pager.pages }">
+									<c:set var="next" value="page=${pager.bepage+1 }&${common }" />
+									<c:set var="last" value="page=${pager.pages }&${common }" />
+									<li><a href='<c:url value="${target }?${next }"/>'>&raquo;</a></li>
+									<li><a href="${target }?${last }">Last</a></li>
+								</c:if>
+							</c:if>
+						</ul>
+					</div>
+				</div>
 			</div>
+			<div class="single-price">
+				<h4>Cart</h4>
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th scope="col">No</th>
+							<th scope="col">Title</th>
+							<th scope="col">Writer</th>
+							<th scope="col">Date</th>
+							<th scope="col">Hits</th>
+						</tr>
+					</thead>
+					<c:forEach items="#{mypageB }" var="mypageb">
+						<tr>
+							<td>${mypageb.id }</td>
+							<td><a
+								href="<c:url value='/travelboards/view/${mypageb.id }'/>">${mypageb.title }</a></td>
+							<td>${mypageb.writer }</td>
+							<td><fmt:formatDate pattern="MM-dd hh:mm"
+									value="${mypageb.regDate }" /></td>
+							<td>${mypageb.hitCount }</td>
+						</tr>
+					</c:forEach>
+				</table>
+
+				<div class="row">
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<ul class="pagination">
+							<c:set var="target" value="boards" />
+							<c:if test="${pager.rows==0 }">
+								<li class="active"><a href="#">1</a></li>
+							</c:if>
+							<c:if test="${pager.rows > 0 }">
+								<c:set var="common"
+									value="size=${pager.size }&bsize=${pager.bsize }" />
+								<c:if test="${pager.bspage > pager.bsize }">
+									<c:set var="home" value="page=1&${common }" />
+									<c:set var="prev" value="page=${pager.bspage-1 }&${common }" />
+									<li><a href="${target }?${home }">Home</a></li>
+									<li><a href='<c:url value="${target }?${prev }"/>'>&laquo;</a></li>
+								</c:if>
+								<c:forEach var="pno" begin="${pager.bspage }"
+									end="${pager.bepage }">
+									<c:if test="${pno==pager.page }">
+										<li class="active"><a href="#">${pno }</a></li>
+									</c:if>
+									<c:if test="${pno!=pager.page }">
+										<c:if test="${pno <= pager.pages }">
+											<c:set var="page" value="page=${pno }&${common }" />
+											<li><a href='<c:url value="${target }?${page }"/>'>${pno }</a></li>
+										</c:if>
+									</c:if>
+								</c:forEach>
+								<c:if test="${pager.bepage < pager.pages }">
+									<c:set var="next" value="page=${pager.bepage+1 }&${common }" />
+									<c:set var="last" value="page=${pager.pages }&${common }" />
+									<li><a href='<c:url value="${target }?${next }"/>'>&raquo;</a></li>
+									<li><a href="${target }?${last }">Last</a></li>
+								</c:if>
+							</c:if>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- </ul> -->
 		</div>
 	</div>
 	</section>
+
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
 </body>
 </html>
