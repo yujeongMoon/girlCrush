@@ -3292,3 +3292,569 @@ Caused by: java.net.SocketException: Connection reset by peer: socket write erro
 2018:07:06 17:09:42.612 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
 2018:07:06 17:09:42.619 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1e802ef9: startup date [Fri Jul 06 17:09:02 KST 2018]; root of context hierarchy 
 2018:07:06 17:09:42.625 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter : Unregistering JMX-exposed beans on shutdown 
+2018:07:06 17:59:26.861 INFO  --- [main] com.example.Application : Starting Application on DESKTOP-HLQF9U2 with PID 12328 (D:\princess\girlCrush\YOLOtour\target\classes started by TopCreduD6 in D:\princess\girlCrush\YOLOtour) 
+2018:07:06 17:59:26.866 INFO  --- [main] com.example.Application : No active profile set, falling back to default profiles: default 
+2018:07:06 17:59:26.904 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 17:59:26 KST 2018]; root of context hierarchy 
+2018:07:06 17:59:28.042 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http) 
+2018:07:06 17:59:28.070 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2018:07:06 17:59:28.071 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.31 
+2018:07:06 17:59:28.357 INFO  --- [localhost-startStop-1] o.apache.jasper.servlet.TldScanner : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time. 
+2018:07:06 17:59:28.363 INFO  --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2018:07:06 17:59:28.363 INFO  --- [localhost-startStop-1] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1459 ms 
+2018:07:06 17:59:28.508 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2018:07:06 17:59:28.512 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018:07:06 17:59:28.512 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018:07:06 17:59:28.513 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018:07:06 17:59:28.513 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*] 
+2018:07:06 17:59:29.164 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 17:59:26 KST 2018]; root of context hierarchy 
+2018:07:06 17:59:29.215 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/mypage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.MyPageController.getMypageView(int,int,int) 
+2018:07:06 17:59:29.220 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.NoticeController.getNoticesView(int,int,int) 
+2018:07:06 17:59:29.221 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getNoticeView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 17:59:29.221 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postUpdate(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 17:59:29.222 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postInsert(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 17:59:29.222 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 17:59:29.223 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 17:59:29.223 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 17:59:29.225 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.example.web.controller.HomeController.getHomeView() 
+2018:07:06 17:59:29.228 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postUpdate(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 17:59:29.229 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsert(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 17:59:29.229 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 17:59:29.230 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 17:59:29.230 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 17:59:29.231 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getTravelView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 17:59:29.232 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.marketing.TravelController.getTravelView(int,int,int) 
+2018:07:06 17:59:29.234 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.postLogin(com.example.login.dto.Login,org.springframework.ui.Model,javax.servlet.http.HttpSession) 
+2018:07:06 17:59:29.235 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.showLoginForm() 
+2018:07:06 17:59:29.235 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.getLogout(javax.servlet.http.HttpSession) 
+2018:07:06 17:59:29.236 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/enroll],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.UserController.postUser(com.example.user.model.User,org.springframework.ui.Model,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes) 
+2018:07:06 17:59:29.237 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.lang.Object com.example.web.controller.searchking.UserController.getUsersView() 
+2018:07:06 17:59:29.239 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018:07:06 17:59:29.240 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018:07:06 17:59:29.270 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 17:59:29.270 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 17:59:29.314 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 17:59:29.619 INFO  --- [main] o.s.j.e.a.AnnotationMBeanExporter : Registering beans for JMX exposure on startup 
+2018:07:06 17:59:29.672 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http) 
+2018:07:06 17:59:29.677 INFO  --- [main] com.example.Application : Started Application in 3.137 seconds (JVM running for 4.194) 
+2018:07:06 18:00:45.756 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018:07:06 18:00:45.757 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization started 
+2018:07:06 18:00:45.778 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms 
+2018:07:06 18:00:46.827 INFO  --- [http-nio-8080-exec-1] jdbc.resultsettable : 
+|-----|---|-------|------|--------|----------------------|----------|
+|rnum |id |writer |title |content |reg_date              |hit_count |
+|-----|---|-------|------|--------|----------------------|----------|
+|1    |11 |W10    |T10   |C10     |2018-07-04 14:10:50.0 |0         |
+|2    |10 |W9     |T9    |C9      |2018-07-04 14:10:50.0 |0         |
+|3    |9  |W8     |T8    |C8      |2018-07-04 14:10:50.0 |0         |
+|4    |8  |W7     |T7    |C7      |2018-07-04 14:10:50.0 |0         |
+|5    |7  |W6     |T6    |C6      |2018-07-04 14:10:50.0 |0         |
+|6    |6  |W5     |T5    |C5      |2018-07-04 14:10:50.0 |0         |
+|7    |5  |W4     |T4    |C4      |2018-07-04 14:10:50.0 |0         |
+|8    |4  |W3     |T3    |C3      |2018-07-04 14:10:50.0 |0         |
+|9    |3  |W2     |T2    |C2      |2018-07-04 14:10:50.0 |0         |
+|10   |2  |W1     |T1    |C1      |2018-07-04 14:10:50.0 |0         |
+|-----|---|-------|------|--------|----------------------|----------|
+ 
+2018:07:06 18:00:46.832 INFO  --- [http-nio-8080-exec-1] jdbc.resultsettable : 
+|---------|
+|count(*) |
+|---------|
+|11       |
+|---------|
+ 
+2018:07:06 18:01:28.463 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2018:07:06 18:01:28.464 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 17:59:26 KST 2018]; root of context hierarchy 
+2018:07:06 18:01:28.466 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter : Unregistering JMX-exposed beans on shutdown 
+2018:07:06 18:01:38.437 INFO  --- [main] com.example.Application : Starting Application on DESKTOP-HLQF9U2 with PID 5792 (D:\princess\girlCrush\YOLOtour\target\classes started by TopCreduD6 in D:\princess\girlCrush\YOLOtour) 
+2018:07:06 18:01:38.446 INFO  --- [main] com.example.Application : No active profile set, falling back to default profiles: default 
+2018:07:06 18:01:38.495 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61fe30: startup date [Fri Jul 06 18:01:38 KST 2018]; root of context hierarchy 
+2018:07:06 18:01:39.874 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http) 
+2018:07:06 18:01:39.906 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2018:07:06 18:01:39.906 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.31 
+2018:07:06 18:01:40.221 INFO  --- [localhost-startStop-1] o.apache.jasper.servlet.TldScanner : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time. 
+2018:07:06 18:01:40.226 INFO  --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2018:07:06 18:01:40.227 INFO  --- [localhost-startStop-1] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1732 ms 
+2018:07:06 18:01:40.414 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2018:07:06 18:01:40.419 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018:07:06 18:01:40.420 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018:07:06 18:01:40.421 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018:07:06 18:01:40.421 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*] 
+2018:07:06 18:01:41.260 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61fe30: startup date [Fri Jul 06 18:01:38 KST 2018]; root of context hierarchy 
+2018:07:06 18:01:41.329 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/mypage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.MyPageController.getMypageView(int,int,int) 
+2018:07:06 18:01:41.334 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.NoticeController.getNoticesView(int,int,int) 
+2018:07:06 18:01:41.335 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getNoticeView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:01:41.336 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:01:41.336 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postInsert(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:01:41.337 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:01:41.338 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postUpdate(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:01:41.338 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:01:41.339 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.example.web.controller.HomeController.getHomeView() 
+2018:07:06 18:01:41.342 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getTravelView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:01:41.343 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.marketing.TravelController.getTravelView(int,int,int) 
+2018:07:06 18:01:41.344 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsert(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:01:41.344 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:01:41.345 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postUpdate(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:01:41.345 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:01:41.346 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:01:41.347 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.getLogout(javax.servlet.http.HttpSession) 
+2018:07:06 18:01:41.348 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.postLogin(com.example.login.dto.Login,org.springframework.ui.Model,javax.servlet.http.HttpSession) 
+2018:07:06 18:01:41.349 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.showLoginForm() 
+2018:07:06 18:01:41.350 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.lang.Object com.example.web.controller.searchking.UserController.getUsersView() 
+2018:07:06 18:01:41.351 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/enroll],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.UserController.postUser(com.example.user.model.User,org.springframework.ui.Model,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes) 
+2018:07:06 18:01:41.353 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018:07:06 18:01:41.354 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018:07:06 18:01:41.402 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:01:41.402 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:01:41.457 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:01:41.956 INFO  --- [main] o.s.j.e.a.AnnotationMBeanExporter : Registering beans for JMX exposure on startup 
+2018:07:06 18:01:42.014 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http) 
+2018:07:06 18:01:42.019 INFO  --- [main] com.example.Application : Started Application in 3.987 seconds (JVM running for 7.127) 
+2018:07:06 18:01:52.084 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018:07:06 18:01:52.085 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization started 
+2018:07:06 18:01:52.109 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms 
+2018:07:06 18:01:53.153 INFO  --- [http-nio-8080-exec-1] jdbc.resultsettable : 
+|-----|---|-------|------|--------|----------------------|----------|
+|rnum |id |writer |title |content |reg_date              |hit_count |
+|-----|---|-------|------|--------|----------------------|----------|
+|1    |11 |W10    |T10   |C10     |2018-07-04 14:10:50.0 |0         |
+|2    |10 |W9     |T9    |C9      |2018-07-04 14:10:50.0 |0         |
+|3    |9  |W8     |T8    |C8      |2018-07-04 14:10:50.0 |0         |
+|4    |8  |W7     |T7    |C7      |2018-07-04 14:10:50.0 |0         |
+|5    |7  |W6     |T6    |C6      |2018-07-04 14:10:50.0 |0         |
+|6    |6  |W5     |T5    |C5      |2018-07-04 14:10:50.0 |0         |
+|7    |5  |W4     |T4    |C4      |2018-07-04 14:10:50.0 |0         |
+|8    |4  |W3     |T3    |C3      |2018-07-04 14:10:50.0 |0         |
+|9    |3  |W2     |T2    |C2      |2018-07-04 14:10:50.0 |0         |
+|10   |2  |W1     |T1    |C1      |2018-07-04 14:10:50.0 |0         |
+|-----|---|-------|------|--------|----------------------|----------|
+ 
+2018:07:06 18:01:53.159 INFO  --- [http-nio-8080-exec-1] jdbc.resultsettable : 
+|---------|
+|count(*) |
+|---------|
+|11       |
+|---------|
+ 
+2018:07:06 18:04:57.842 INFO  --- [main] com.example.Application : Starting Application on DESKTOP-HLQF9U2 with PID 23360 (D:\princess\girlCrush\YOLOtour\target\classes started by TopCreduD6 in D:\princess\girlCrush\YOLOtour) 
+2018:07:06 18:04:57.847 INFO  --- [main] com.example.Application : No active profile set, falling back to default profiles: default 
+2018:07:06 18:04:57.883 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:04:57 KST 2018]; root of context hierarchy 
+2018:07:06 18:04:58.992 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http) 
+2018:07:06 18:04:59.019 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2018:07:06 18:04:59.020 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.31 
+2018:07:06 18:04:59.309 INFO  --- [localhost-startStop-1] o.apache.jasper.servlet.TldScanner : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time. 
+2018:07:06 18:04:59.314 INFO  --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2018:07:06 18:04:59.314 INFO  --- [localhost-startStop-1] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1431 ms 
+2018:07:06 18:04:59.459 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2018:07:06 18:04:59.462 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018:07:06 18:04:59.463 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018:07:06 18:04:59.463 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018:07:06 18:04:59.464 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*] 
+2018:07:06 18:05:00.102 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:04:57 KST 2018]; root of context hierarchy 
+2018:07:06 18:05:00.160 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/mypage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.MyPageController.getMypageView(int,int,int) 
+2018:07:06 18:05:00.167 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getNoticeView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:05:00.168 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:05:00.168 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postInsert(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:05:00.169 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postUpdate(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:05:00.170 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:05:00.171 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.NoticeController.getNoticesView(int,int,int) 
+2018:07:06 18:05:00.172 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:05:00.173 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.example.web.controller.HomeController.getHomeView() 
+2018:07:06 18:05:00.178 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:05:00.179 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getTravelView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:05:00.180 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.marketing.TravelController.getTravelView(int,int,int) 
+2018:07:06 18:05:00.181 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsert(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:05:00.182 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postUpdate(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:05:00.183 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:05:00.184 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:05:00.186 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.getLogout(javax.servlet.http.HttpSession) 
+2018:07:06 18:05:00.187 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.showLoginForm() 
+2018:07:06 18:05:00.187 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.postLogin(com.example.login.dto.Login,org.springframework.ui.Model,javax.servlet.http.HttpSession) 
+2018:07:06 18:05:00.188 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.lang.Object com.example.web.controller.searchking.UserController.getUsersView() 
+2018:07:06 18:05:00.189 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/enroll],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.UserController.postUser(com.example.user.model.User,org.springframework.ui.Model,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes) 
+2018:07:06 18:05:00.191 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018:07:06 18:05:00.192 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018:07:06 18:05:00.220 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:05:00.220 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:05:00.254 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:05:00.483 INFO  --- [main] o.s.j.e.a.AnnotationMBeanExporter : Registering beans for JMX exposure on startup 
+2018:07:06 18:05:00.527 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http) 
+2018:07:06 18:05:00.532 INFO  --- [main] com.example.Application : Started Application in 3.008 seconds (JVM running for 4.106) 
+2018:07:06 18:07:15.184 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2018:07:06 18:07:15.185 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:04:57 KST 2018]; root of context hierarchy 
+2018:07:06 18:07:15.187 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter : Unregistering JMX-exposed beans on shutdown 
+2018:07:06 18:07:30.495 INFO  --- [main] com.example.Application : Starting Application on DESKTOP-HLQF9U2 with PID 20636 (D:\princess\girlCrush\YOLOtour\target\classes started by TopCreduD6 in D:\princess\girlCrush\YOLOtour) 
+2018:07:06 18:07:30.499 INFO  --- [main] com.example.Application : No active profile set, falling back to default profiles: default 
+2018:07:06 18:07:30.535 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:07:30 KST 2018]; root of context hierarchy 
+2018:07:06 18:07:31.617 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http) 
+2018:07:06 18:07:31.645 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2018:07:06 18:07:31.646 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.31 
+2018:07:06 18:07:31.937 INFO  --- [localhost-startStop-1] o.apache.jasper.servlet.TldScanner : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time. 
+2018:07:06 18:07:31.942 INFO  --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2018:07:06 18:07:31.943 INFO  --- [localhost-startStop-1] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1408 ms 
+2018:07:06 18:07:32.084 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2018:07:06 18:07:32.088 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018:07:06 18:07:32.089 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018:07:06 18:07:32.089 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018:07:06 18:07:32.090 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*] 
+2018:07:06 18:07:32.733 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:07:30 KST 2018]; root of context hierarchy 
+2018:07:06 18:07:32.782 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/mypage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.MyPageController.getMypageView(int,int,int) 
+2018:07:06 18:07:32.787 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postInsert(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:07:32.787 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getNoticeView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:07:32.788 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:07:32.788 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.NoticeController.getNoticesView(int,int,int) 
+2018:07:06 18:07:32.789 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postUpdate(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:07:32.790 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:07:32.790 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:07:32.791 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.example.web.controller.HomeController.getHomeView() 
+2018:07:06 18:07:32.794 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getTravelView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:07:32.795 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.marketing.TravelController.getTravelView(int,int,int) 
+2018:07:06 18:07:32.795 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsert(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:07:32.796 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:07:32.796 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postUpdate(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:07:32.797 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:07:32.797 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:07:32.798 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.getLogout(javax.servlet.http.HttpSession) 
+2018:07:06 18:07:32.799 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.showLoginForm() 
+2018:07:06 18:07:32.800 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.postLogin(com.example.login.dto.Login,org.springframework.ui.Model,javax.servlet.http.HttpSession) 
+2018:07:06 18:07:32.801 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/enroll],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.UserController.postUser(com.example.user.model.User,org.springframework.ui.Model,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes) 
+2018:07:06 18:07:32.801 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.lang.Object com.example.web.controller.searchking.UserController.getUsersView() 
+2018:07:06 18:07:32.803 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018:07:06 18:07:32.804 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018:07:06 18:07:32.833 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:07:32.833 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:07:32.867 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:07:33.089 INFO  --- [main] o.s.j.e.a.AnnotationMBeanExporter : Registering beans for JMX exposure on startup 
+2018:07:06 18:07:33.134 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http) 
+2018:07:06 18:07:33.138 INFO  --- [main] com.example.Application : Started Application in 2.965 seconds (JVM running for 4.049) 
+2018:07:06 18:07:52.659 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018:07:06 18:07:52.660 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization started 
+2018:07:06 18:07:52.679 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms 
+2018:07:06 18:08:01.875 INFO  --- [http-nio-8080-exec-9] jdbc.resultsettable : 
+|---|-------|------|--------|----------------------|----------|
+|id |writer |title |content |reg_date              |hit_count |
+|---|-------|------|--------|----------------------|----------|
+|1  |W0     |T0    |C0      |2018-07-04 14:11:33.0 |0         |
+|---|-------|------|--------|----------------------|----------|
+ 
+2018:07:06 18:08:14.629 INFO  --- [http-nio-8080-exec-7] jdbc.resultsettable : 
+|---|-------|------|--------|----------------------|----------|
+|id |writer |title |content |reg_date              |hit_count |
+|---|-------|------|--------|----------------------|----------|
+|1  |W0     |T0    |C0      |2018-07-04 14:11:33.0 |0         |
+|---|-------|------|--------|----------------------|----------|
+ 
+2018:07:06 18:08:28.092 INFO  --- [http-nio-8080-exec-6] jdbc.resultsettable : 
+|-----|---|-------|------|--------|----------------------|----------|
+|rnum |id |writer |title |content |reg_date              |hit_count |
+|-----|---|-------|------|--------|----------------------|----------|
+|1    |11 |W10    |T10   |C10     |2018-07-04 14:10:50.0 |0         |
+|2    |10 |W9     |T9    |C9      |2018-07-04 14:10:50.0 |0         |
+|3    |9  |W8     |T8    |C8      |2018-07-04 14:10:50.0 |0         |
+|4    |8  |W7     |T7    |C7      |2018-07-04 14:10:50.0 |0         |
+|5    |7  |W6     |T6    |C6      |2018-07-04 14:10:50.0 |0         |
+|6    |6  |W5     |T5    |C5      |2018-07-04 14:10:50.0 |0         |
+|7    |5  |W4     |T4    |C4      |2018-07-04 14:10:50.0 |0         |
+|8    |4  |W3     |T3    |C3      |2018-07-04 14:10:50.0 |0         |
+|9    |3  |W2     |T2    |C2      |2018-07-04 14:10:50.0 |0         |
+|10   |2  |W1     |T1    |C1      |2018-07-04 14:10:50.0 |0         |
+|-----|---|-------|------|--------|----------------------|----------|
+ 
+2018:07:06 18:08:28.098 INFO  --- [http-nio-8080-exec-6] jdbc.resultsettable : 
+|---------|
+|count(*) |
+|---------|
+|11       |
+|---------|
+ 
+2018:07:06 18:08:58.384 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2018:07:06 18:08:58.392 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:07:30 KST 2018]; root of context hierarchy 
+2018:07:06 18:08:58.394 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter : Unregistering JMX-exposed beans on shutdown 
+2018:07:06 18:09:04.107 INFO  --- [main] com.example.Application : Starting Application on DESKTOP-HLQF9U2 with PID 3200 (D:\princess\girlCrush\YOLOtour\target\classes started by TopCreduD6 in D:\princess\girlCrush\YOLOtour) 
+2018:07:06 18:09:04.107 INFO  --- [main] com.example.Application : No active profile set, falling back to default profiles: default 
+2018:07:06 18:09:04.138 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:09:04 KST 2018]; root of context hierarchy 
+2018:07:06 18:09:05.219 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http) 
+2018:07:06 18:09:05.247 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2018:07:06 18:09:05.247 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.31 
+2018:07:06 18:09:05.543 INFO  --- [localhost-startStop-1] o.apache.jasper.servlet.TldScanner : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time. 
+2018:07:06 18:09:05.548 INFO  --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2018:07:06 18:09:05.548 INFO  --- [localhost-startStop-1] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1410 ms 
+2018:07:06 18:09:05.677 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2018:07:06 18:09:05.693 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018:07:06 18:09:05.693 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018:07:06 18:09:05.693 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018:07:06 18:09:05.693 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*] 
+2018:07:06 18:09:06.445 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:09:04 KST 2018]; root of context hierarchy 
+2018:07:06 18:09:06.507 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/mypage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.MyPageController.getMypageView(int,int,int) 
+2018:07:06 18:09:06.507 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getNoticeView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:09:06.507 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:09:06.507 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:09:06.507 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postInsert(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:09:06.507 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.NoticeController.getNoticesView(int,int,int) 
+2018:07:06 18:09:06.507 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postUpdate(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:09:06.507 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:09:06.507 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.example.web.controller.HomeController.getHomeView() 
+2018:07:06 18:09:06.507 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:09:06.507 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsert(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:09:06.507 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:09:06.507 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postUpdate(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:09:06.524 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getTravelView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:09:06.525 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.marketing.TravelController.getTravelView(int,int,int) 
+2018:07:06 18:09:06.526 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:09:06.527 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.getLogout(javax.servlet.http.HttpSession) 
+2018:07:06 18:09:06.528 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.postLogin(com.example.login.dto.Login,org.springframework.ui.Model,javax.servlet.http.HttpSession) 
+2018:07:06 18:09:06.529 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.showLoginForm() 
+2018:07:06 18:09:06.530 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.lang.Object com.example.web.controller.searchking.UserController.getUsersView() 
+2018:07:06 18:09:06.531 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/enroll],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.UserController.postUser(com.example.user.model.User,org.springframework.ui.Model,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes) 
+2018:07:06 18:09:06.533 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018:07:06 18:09:06.534 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018:07:06 18:09:06.549 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:09:06.565 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:09:06.596 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:09:06.853 INFO  --- [main] o.s.j.e.a.AnnotationMBeanExporter : Registering beans for JMX exposure on startup 
+2018:07:06 18:09:06.900 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http) 
+2018:07:06 18:09:06.900 INFO  --- [main] com.example.Application : Started Application in 3.121 seconds (JVM running for 4.184) 
+2018:07:06 18:09:21.834 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018:07:06 18:09:21.835 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization started 
+2018:07:06 18:09:21.853 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms 
+2018:07:06 18:09:22.988 INFO  --- [http-nio-8080-exec-1] jdbc.resultsettable : 
+|-----|---|-------|------|--------|----------------------|----------|
+|rnum |id |writer |title |content |reg_date              |hit_count |
+|-----|---|-------|------|--------|----------------------|----------|
+|1    |11 |W10    |T10   |C10     |2018-07-04 14:10:50.0 |0         |
+|2    |10 |W9     |T9    |C9      |2018-07-04 14:10:50.0 |0         |
+|3    |9  |W8     |T8    |C8      |2018-07-04 14:10:50.0 |0         |
+|4    |8  |W7     |T7    |C7      |2018-07-04 14:10:50.0 |0         |
+|5    |7  |W6     |T6    |C6      |2018-07-04 14:10:50.0 |0         |
+|6    |6  |W5     |T5    |C5      |2018-07-04 14:10:50.0 |0         |
+|7    |5  |W4     |T4    |C4      |2018-07-04 14:10:50.0 |0         |
+|8    |4  |W3     |T3    |C3      |2018-07-04 14:10:50.0 |0         |
+|9    |3  |W2     |T2    |C2      |2018-07-04 14:10:50.0 |0         |
+|10   |2  |W1     |T1    |C1      |2018-07-04 14:10:50.0 |0         |
+|-----|---|-------|------|--------|----------------------|----------|
+ 
+2018:07:06 18:09:22.996 INFO  --- [http-nio-8080-exec-1] jdbc.resultsettable : 
+|---------|
+|count(*) |
+|---------|
+|11       |
+|---------|
+ 
+2018:07:06 18:21:16.715 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2018:07:06 18:21:16.728 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:09:04 KST 2018]; root of context hierarchy 
+2018:07:06 18:21:16.730 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter : Unregistering JMX-exposed beans on shutdown 
+2018:07:06 18:21:27.443 INFO  --- [main] com.example.Application : Starting Application on DESKTOP-HLQF9U2 with PID 7528 (D:\princess\girlCrush\YOLOtour\target\classes started by TopCreduD6 in D:\princess\girlCrush\YOLOtour) 
+2018:07:06 18:21:27.459 INFO  --- [main] com.example.Application : No active profile set, falling back to default profiles: default 
+2018:07:06 18:21:27.509 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61fe30: startup date [Fri Jul 06 18:21:27 KST 2018]; root of context hierarchy 
+2018:07:06 18:21:28.805 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http) 
+2018:07:06 18:21:28.839 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2018:07:06 18:21:28.839 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.31 
+2018:07:06 18:21:29.151 INFO  --- [localhost-startStop-1] o.apache.jasper.servlet.TldScanner : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time. 
+2018:07:06 18:21:29.151 INFO  --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2018:07:06 18:21:29.151 INFO  --- [localhost-startStop-1] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1642 ms 
+2018:07:06 18:21:29.354 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2018:07:06 18:21:29.354 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018:07:06 18:21:29.354 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018:07:06 18:21:29.354 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018:07:06 18:21:29.354 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*] 
+2018:07:06 18:21:30.183 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@61fe30: startup date [Fri Jul 06 18:21:27 KST 2018]; root of context hierarchy 
+2018:07:06 18:21:30.256 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/mypage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.MyPageController.getMypageView(int,int,int) 
+2018:07:06 18:21:30.256 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:21:30.256 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getNoticeView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:21:30.256 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:21:30.256 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postUpdate(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:21:30.256 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.NoticeController.getNoticesView(int,int,int) 
+2018:07:06 18:21:30.256 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:21:30.256 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postInsert(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:21:30.256 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.example.web.controller.HomeController.getHomeView() 
+2018:07:06 18:21:30.272 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:21:30.272 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:21:30.272 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postUpdate(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:21:30.272 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.marketing.TravelController.getTravelView(int,int,int) 
+2018:07:06 18:21:30.272 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getTravelView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:21:30.272 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:21:30.272 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsert(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:21:30.272 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.getLogout(javax.servlet.http.HttpSession) 
+2018:07:06 18:21:30.272 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.showLoginForm() 
+2018:07:06 18:21:30.272 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.postLogin(com.example.login.dto.Login,org.springframework.ui.Model,javax.servlet.http.HttpSession) 
+2018:07:06 18:21:30.272 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.lang.Object com.example.web.controller.searchking.UserController.getUsersView() 
+2018:07:06 18:21:30.272 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/enroll],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.UserController.postUser(com.example.user.model.User,org.springframework.ui.Model,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes) 
+2018:07:06 18:21:30.272 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018:07:06 18:21:30.272 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018:07:06 18:21:30.319 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:21:30.319 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:21:30.381 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:21:30.857 INFO  --- [main] o.s.j.e.a.AnnotationMBeanExporter : Registering beans for JMX exposure on startup 
+2018:07:06 18:21:30.920 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http) 
+2018:07:06 18:21:30.920 INFO  --- [main] com.example.Application : Started Application in 3.858 seconds (JVM running for 5.066) 
+2018:07:06 18:21:40.882 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018:07:06 18:21:40.883 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization started 
+2018:07:06 18:21:40.909 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms 
+2018:07:06 18:21:42.309 INFO  --- [http-nio-8080-exec-1] jdbc.resultsettable : 
+|-----|---|-------|------|--------|----------------------|----------|
+|rnum |id |writer |title |content |reg_date              |hit_count |
+|-----|---|-------|------|--------|----------------------|----------|
+|1    |11 |W10    |T10   |C10     |2018-07-04 14:10:50.0 |0         |
+|2    |10 |W9     |T9    |C9      |2018-07-04 14:10:50.0 |0         |
+|3    |9  |W8     |T8    |C8      |2018-07-04 14:10:50.0 |0         |
+|4    |8  |W7     |T7    |C7      |2018-07-04 14:10:50.0 |0         |
+|5    |7  |W6     |T6    |C6      |2018-07-04 14:10:50.0 |0         |
+|6    |6  |W5     |T5    |C5      |2018-07-04 14:10:50.0 |0         |
+|7    |5  |W4     |T4    |C4      |2018-07-04 14:10:50.0 |0         |
+|8    |4  |W3     |T3    |C3      |2018-07-04 14:10:50.0 |0         |
+|9    |3  |W2     |T2    |C2      |2018-07-04 14:10:50.0 |0         |
+|10   |2  |W1     |T1    |C1      |2018-07-04 14:10:50.0 |0         |
+|-----|---|-------|------|--------|----------------------|----------|
+ 
+2018:07:06 18:21:42.315 INFO  --- [http-nio-8080-exec-1] jdbc.resultsettable : 
+|---------|
+|count(*) |
+|---------|
+|11       |
+|---------|
+ 
+2018:07:06 18:22:42.480 INFO  --- [main] com.example.Application : Starting Application on DESKTOP-HLQF9U2 with PID 9764 (D:\princess\girlCrush\YOLOtour\target\classes started by TopCreduD6 in D:\princess\girlCrush\YOLOtour) 
+2018:07:06 18:22:42.480 INFO  --- [main] com.example.Application : No active profile set, falling back to default profiles: default 
+2018:07:06 18:22:42.525 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:22:42 KST 2018]; root of context hierarchy 
+2018:07:06 18:22:43.598 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http) 
+2018:07:06 18:22:43.628 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2018:07:06 18:22:43.628 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.31 
+2018:07:06 18:22:43.917 INFO  --- [localhost-startStop-1] o.apache.jasper.servlet.TldScanner : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time. 
+2018:07:06 18:22:43.917 INFO  --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2018:07:06 18:22:43.917 INFO  --- [localhost-startStop-1] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1392 ms 
+2018:07:06 18:22:44.057 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2018:07:06 18:22:44.073 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018:07:06 18:22:44.073 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018:07:06 18:22:44.073 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018:07:06 18:22:44.073 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*] 
+2018:07:06 18:22:44.720 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:22:42 KST 2018]; root of context hierarchy 
+2018:07:06 18:22:44.762 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/mypage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.MyPageController.getMypageView(int,int,int) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postInsert(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.NoticeController.getNoticesView(int,int,int) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getNoticeView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postUpdate(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.example.web.controller.HomeController.getHomeView() 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsert(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.marketing.TravelController.getTravelView(int,int,int) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getTravelView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postUpdate(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.showLoginForm() 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.postLogin(com.example.login.dto.Login,org.springframework.ui.Model,javax.servlet.http.HttpSession) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.getLogout(javax.servlet.http.HttpSession) 
+2018:07:06 18:22:44.777 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.lang.Object com.example.web.controller.searchking.UserController.getUsersView() 
+2018:07:06 18:22:44.793 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/enroll],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.UserController.postUser(com.example.user.model.User,org.springframework.ui.Model,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes) 
+2018:07:06 18:22:44.793 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018:07:06 18:22:44.793 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018:07:06 18:22:44.809 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:22:44.809 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:22:44.856 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:22:45.074 INFO  --- [main] o.s.j.e.a.AnnotationMBeanExporter : Registering beans for JMX exposure on startup 
+2018:07:06 18:22:45.121 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http) 
+2018:07:06 18:22:45.121 INFO  --- [main] com.example.Application : Started Application in 2.966 seconds (JVM running for 4.014) 
+2018:07:06 18:22:55.736 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018:07:06 18:22:55.737 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization started 
+2018:07:06 18:22:55.755 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms 
+2018:07:06 18:22:56.867 INFO  --- [http-nio-8080-exec-1] jdbc.resultsettable : 
+|-----|---|-------|------|--------|----------------------|----------|
+|rnum |id |writer |title |content |reg_date              |hit_count |
+|-----|---|-------|------|--------|----------------------|----------|
+|1    |11 |W10    |T10   |C10     |2018-07-04 14:10:50.0 |0         |
+|2    |10 |W9     |T9    |C9      |2018-07-04 14:10:50.0 |0         |
+|3    |9  |W8     |T8    |C8      |2018-07-04 14:10:50.0 |0         |
+|4    |8  |W7     |T7    |C7      |2018-07-04 14:10:50.0 |0         |
+|5    |7  |W6     |T6    |C6      |2018-07-04 14:10:50.0 |0         |
+|6    |6  |W5     |T5    |C5      |2018-07-04 14:10:50.0 |0         |
+|7    |5  |W4     |T4    |C4      |2018-07-04 14:10:50.0 |0         |
+|8    |4  |W3     |T3    |C3      |2018-07-04 14:10:50.0 |0         |
+|9    |3  |W2     |T2    |C2      |2018-07-04 14:10:50.0 |0         |
+|10   |2  |W1     |T1    |C1      |2018-07-04 14:10:50.0 |0         |
+|-----|---|-------|------|--------|----------------------|----------|
+ 
+2018:07:06 18:22:56.873 INFO  --- [http-nio-8080-exec-1] jdbc.resultsettable : 
+|---------|
+|count(*) |
+|---------|
+|11       |
+|---------|
+ 
+2018:07:06 18:36:52.624 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2018:07:06 18:36:52.631 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:22:42 KST 2018]; root of context hierarchy 
+2018:07:06 18:36:52.633 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter : Unregistering JMX-exposed beans on shutdown 
+2018:07:06 18:36:59.596 INFO  --- [main] com.example.Application : Starting Application on DESKTOP-HLQF9U2 with PID 7852 (D:\princess\girlCrush\YOLOtour\target\classes started by TopCreduD6 in D:\princess\girlCrush\YOLOtour) 
+2018:07:06 18:36:59.596 INFO  --- [main] com.example.Application : No active profile set, falling back to default profiles: default 
+2018:07:06 18:36:59.627 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:36:59 KST 2018]; root of context hierarchy 
+2018:07:06 18:37:00.711 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http) 
+2018:07:06 18:37:00.735 INFO  --- [main] o.a.catalina.core.StandardService : Starting service [Tomcat] 
+2018:07:06 18:37:00.735 INFO  --- [main] o.a.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/8.5.31 
+2018:07:06 18:37:01.026 INFO  --- [localhost-startStop-1] o.apache.jasper.servlet.TldScanner : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time. 
+2018:07:06 18:37:01.041 INFO  --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext 
+2018:07:06 18:37:01.041 INFO  --- [localhost-startStop-1] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 1414 ms 
+2018:07:06 18:37:01.182 INFO  --- [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2018:07:06 18:37:01.182 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2018:07:06 18:37:01.182 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'hiddenHttpMethodFilter' to: [/*] 
+2018:07:06 18:37:01.182 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'httpPutFormContentFilter' to: [/*] 
+2018:07:06 18:37:01.182 INFO  --- [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'requestContextFilter' to: [/*] 
+2018:07:06 18:37:01.836 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:36:59 KST 2018]; root of context hierarchy 
+2018:07:06 18:37:01.887 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/mypage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.MyPageController.getMypageView(int,int,int) 
+2018:07:06 18:37:01.891 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.captain.NoticeController.getNoticesView(int,int,int) 
+2018:07:06 18:37:01.892 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getNoticeView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:37:01.893 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postInsert(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:37:01.893 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:37:01.894 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:37:01.894 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.postUpdate(com.example.noticeboard.model.Notice,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:37:01.895 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/notices/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.captain.NoticeController.getInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:37:01.896 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String com.example.web.controller.HomeController.getHomeView() 
+2018:07:06 18:37:01.900 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsertView(javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:37:01.901 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/write],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postInsert(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:37:01.901 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/delete/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getDelete(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:37:01.902 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getUpdateView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:37:01.903 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/update],methods=[POST]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.postUpdate(com.example.travelboard.model.Travel,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:37:01.903 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.example.web.controller.marketing.TravelController.getTravelView(int,int,int) 
+2018:07:06 18:37:01.904 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/travelboards/view/{id}],methods=[GET]}" onto public java.lang.String com.example.web.controller.marketing.TravelController.getTravelView(long,javax.servlet.http.HttpSession,org.springframework.ui.Model) 
+2018:07:06 18:37:01.906 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logout],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.getLogout(javax.servlet.http.HttpSession) 
+2018:07:06 18:37:01.907 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[GET]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.showLoginForm() 
+2018:07:06 18:37:01.908 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.LoginController.postLogin(com.example.login.dto.Login,org.springframework.ui.Model,javax.servlet.http.HttpSession) 
+2018:07:06 18:37:01.909 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users/enroll],methods=[POST]}" onto public java.lang.String com.example.web.controller.searchking.UserController.postUser(com.example.user.model.User,org.springframework.ui.Model,javax.servlet.http.HttpSession,org.springframework.web.servlet.mvc.support.RedirectAttributes) 
+2018:07:06 18:37:01.910 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public java.lang.Object com.example.web.controller.searchking.UserController.getUsersView() 
+2018:07:06 18:37:01.913 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest) 
+2018:07:06 18:37:01.914 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) 
+2018:07:06 18:37:01.945 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:37:01.946 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:37:01.980 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2018:07:06 18:37:02.204 INFO  --- [main] o.s.j.e.a.AnnotationMBeanExporter : Registering beans for JMX exposure on startup 
+2018:07:06 18:37:02.249 INFO  --- [main] o.s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http) 
+2018:07:06 18:37:02.253 INFO  --- [main] com.example.Application : Started Application in 2.984 seconds (JVM running for 4.047) 
+2018:07:06 18:37:10.985 INFO  --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2018:07:06 18:37:10.985 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization started 
+2018:07:06 18:37:11.005 INFO  --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms 
+2018:07:06 18:37:12.205 INFO  --- [http-nio-8080-exec-1] jdbc.resultsettable : 
+|-----|---|-------|------|--------|----------------------|----------|
+|rnum |id |writer |title |content |reg_date              |hit_count |
+|-----|---|-------|------|--------|----------------------|----------|
+|1    |11 |W10    |T10   |C10     |2018-07-04 14:10:50.0 |0         |
+|2    |10 |W9     |T9    |C9      |2018-07-04 14:10:50.0 |0         |
+|3    |9  |W8     |T8    |C8      |2018-07-04 14:10:50.0 |0         |
+|4    |8  |W7     |T7    |C7      |2018-07-04 14:10:50.0 |0         |
+|5    |7  |W6     |T6    |C6      |2018-07-04 14:10:50.0 |0         |
+|6    |6  |W5     |T5    |C5      |2018-07-04 14:10:50.0 |0         |
+|7    |5  |W4     |T4    |C4      |2018-07-04 14:10:50.0 |0         |
+|8    |4  |W3     |T3    |C3      |2018-07-04 14:10:50.0 |0         |
+|9    |3  |W2     |T2    |C2      |2018-07-04 14:10:50.0 |0         |
+|10   |2  |W1     |T1    |C1      |2018-07-04 14:10:50.0 |0         |
+|-----|---|-------|------|--------|----------------------|----------|
+ 
+2018:07:06 18:37:12.212 INFO  --- [http-nio-8080-exec-1] jdbc.resultsettable : 
+|---------|
+|count(*) |
+|---------|
+|11       |
+|---------|
+ 
+2018:07:06 18:37:38.465 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested. 
+2018:07:06 18:37:38.471 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@75329a49: startup date [Fri Jul 06 18:36:59 KST 2018]; root of context hierarchy 
+2018:07:06 18:37:38.473 INFO  --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter : Unregistering JMX-exposed beans on shutdown 
