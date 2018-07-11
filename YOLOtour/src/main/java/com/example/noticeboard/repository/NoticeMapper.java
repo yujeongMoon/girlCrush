@@ -20,16 +20,9 @@ public interface NoticeMapper {
 	
 	@Select("SELECT * FROM NOTICE_BOARD ORDER BY notice_id DESC")
 	public List<Notice> selectAll();
-<<<<<<< HEAD
 	
-	@Select("SELECT * FROM travel_board where id = 1")
-	public List<DomesticTravel> selectByLimit_travel();
-	
-	public Notice selectById(long id);
-=======
-
 	public Notice selectById(long noticeId);
->>>>>>> d8e9d7b5bdc9d6c374f1f83203290f7774632f96
+
 	public List<Notice> selectByLimit(@Param("page") int page, @Param("size") int size);
 	
 	public int increment(@Param("noticeId") long noticeId, @Param("requester") String requester);	
