@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>   <!-- 조가희 : 결제 mapper.xml -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.payment.repository.PaymentMapper">
+	
+	<!-- type="스프링이름" id="별명" -->
+	<!-- <result property="스프링" column="DB이름" /> -->
+	<resultMap type="com.example.payment.model.Payment" id="PaymentResultMap">
+		<result property="payId" column="PAY_ID" />
+		<result property="name" column="NAME" />
+		<result property="email" column="EMAIL" />
+		<result property="address" column="ADDRESS" />
+		<result property="nameOnCard" column="NAME_ON_CARD" />
+		<result property="creditCardNumber" column="CREADITCARD_NUMBER" />
+		<result property="expMonth" column="EXP_MONTH" />
+		<result property="expYear" column="EXP_YEAR" />
+		<result property="cvc" column="CVC" />
+		<result property="userId" column="USER_ID" />
+	</resultMap>
+	
+	<!-- insert, update, delete 작업은 영향 받은 로우의 개수를 값을 자동으로 리턴한다. -->
+	<!-- #{} 안에는 property와 맞추고, 괄호안에는 DB칼럼명과  맞춰주어야 한다. -->
+	<insert id="insert" parameterType="com.example.travelboard.model.DomesticTravel">
+		INSERT INTO PAYMENT_BOARD(PAY_ID, NAME, EMAIL, ADDRESS, NAME_ON_CARD, CREADITCARD_NUMBER, 
+								  EXP_MONTH, EXP_YEAR, CVC, USER_ID)
+		VALUES(ID_PAYMENT.NEXTVAL, #{name}, #{email}, #{address}, #{nameOnCard}, #{creditCardNumber},
+		 		#{expMonth}, #{expYear}, #{cvc}, #{userId})
+	</insert>

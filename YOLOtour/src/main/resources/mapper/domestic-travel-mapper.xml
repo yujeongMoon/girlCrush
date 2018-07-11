@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>   <!-- 조가희 : 국내여행 mapper.xml -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.travelboard.repository.DomesticTravelMapper">
+	
+	<!-- type="스프링이름" id="별명" -->
+	<!-- <result property="스프링" column="DB이름" /> -->
+	<resultMap type="com.example.travelboard.model.DomesticTravel" id="DomesticTravelResultMap">
+		<result property="tbdId" column="TBD_ID" />
+		<result property="writer" column="WRITER" />
+		<result property="title" column="TITLE" />
+		<result property="content" column="CONTENT" />
+		<result property="regDate" column="REG_DATE" />
+		<result property="hitCount" column="HIT_COUNT" />
+		<result property="price" column="PRICE" />
+		<result property="imgId" column="IMG_ID" />
+	</resultMap>
+	
+	<!-- insert, update, delete 작업은 영향 받은 로우의 개수를 값을 자동으로 리턴한다. -->
+	<!-- #{} 안에는 property와 맞추고, 괄호안에는 DB칼럼명과  맞춰주어야 한다. -->
+	<insert id="insert" parameterType="com.example.travelboard.model.DomesticTravel">
+		INSERT INTO travel_board_domestic(TBD_ID, WRITER, TITEL, CONTETN, REG_DATE, HIT_COUNT, PRICE, IMG_ID)
+		VALUES(ID_TBD.NEXTVAL, #{writer}, #{title}, #{content}, SYSDATE, 0, #{price}, #{imgId}))
+	</insert>
+	
+	<update id="update" parameterType="com.example.travelboard.model.DomesticTravel">
+		UPDATE travel_board_domestic SET title=#{title}, content=#{content} WHERE TBD_ID=#{tbdId}
+	</update>
+	
+	<delete id="delete" parameterType="long">
+		DELETE FROM travel_board_domestic WHERE TBD_ID=#{tbdId}
+	</delete>
+	
+	
+	<select id="selectById" parameterType="long" resultMap="DomesticTravelResultMap">
+		SELECT * FROM travel_board_domestic WHERE TBD_ID=#{tbdId}
+	</select>
+	
+	<!-- Collection 처리는 자동으로 지원한다. resultType 자동 바인딩-->
+	<!-- resultType="Board"를 사용할 수 있는 경우 테이블 칼럼 명이 모델 클래스 필드 변수명과 같을 때만 사용가능--> 
+ 	<select id="selectByLimit" resultType="com.example.travelboard.model.DomesticTravel">
+		<bind name="start" value="@com.example.Pager@seekStart(page, size)"/>
+		<bind name="end" value="@com.example.Pager@seekEnd(page, size)"/>
+		SELECT * FROM (
+			SELECT ROWNUM AS rnum, b.* FROM (
+				SELECT * FROM travel_board_domestic ORDER BY TBD_ID DESC
+			) b
+		) WHERE rnum &gt;= #{start} and rnum &lt;= #{end}
+	</select> 
+	
+	<update id="increment">
+		UPDATE travel_board_domestic SET hit_count=hit_count+1 WHERE TBD_ID=#{tbdId} and writer!=#{requester}
+	</update>
+	
+</mapper>
+

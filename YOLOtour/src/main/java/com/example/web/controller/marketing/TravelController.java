@@ -17,15 +17,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.Pager;
-import com.example.travelboard.model.Travel;
-import com.example.travelboard.repository.TravelMapper;
+import com.example.travelboard.model.DomesticTravel;
+import com.example.travelboard.repository.DomesticTravelMapper;
 import com.example.user.model.User;
+
 
 @Controller
 @RequestMapping("/travelboards")
 public class TravelController {
 	@Autowired
-	private TravelMapper travelMapper;
+	private DomesticTravelMapper domesticTravelMapper;
 	
 	// travelboard 화면일때 Top메뉴에서 메뉴타이틀에 강조표시 해주는 역할.  
 	@ModelAttribute("active")
@@ -40,19 +41,19 @@ public class TravelController {
 			@RequestParam(name="size", required=false, defaultValue="10") int size,
 			@RequestParam(name="bsize", required=false, defaultValue="5") int bsize){
 		ModelAndView mav = new ModelAndView("board_list");
-		mav.addObject("boards", travelMapper.selectByLimit(page, size));
-		mav.addObject("pager", new Pager(page, size, bsize, travelMapper.count()));
+		mav.addObject("boards", domesticTravelMapper.selectByLimit(page, size));
+		mav.addObject("pager", new Pager(page, size, bsize, domesticTravelMapper.count()));
 		return mav;
 	}
 	
 	@GetMapping("/view/{id}")
-	public String getTravelView(@PathVariable long id, HttpSession session, Model model) {
+	public String getTravelView(@PathVariable int id, HttpSession session, Model model) {
 		User user = (User) session.getAttribute("user");
 		if(user == null) {
 			return "redirect:/login"; // user가 null일때 login 페이지로 redirect
 		}
-		travelMapper.increment(id, user.getEmail());
-		model.addAttribute("board", travelMapper.selectById(id));
+		domesticTravelMapper.increment(id, user.getEmail());
+		model.addAttribute("board", domesticTravelMapper.selectById(id));
 		return "baord_view";  
 	}
 	
@@ -67,21 +68,21 @@ public class TravelController {
 	}
 	
 	@PostMapping("/write")
-	public String postInsert(Travel travel, HttpSession session, Model model) {
+	public String postInsert(DomesticTravel travel, HttpSession session, Model model) {
 		User user = (User) session.getAttribute("user");
 		
 		if(user != null && travel != null) {
 			if(user.getEmail().equals(travel.getWriter())) {
-				travelMapper.insert(travel);
+				domesticTravelMapper.insert(travel);
 			}
 		}
 		return "redirect:/travelboards";
 	}
 	
 	@GetMapping("/update/{id}")
-	public String getUpdateView(@PathVariable long id, HttpSession session, Model model) {
+	public String getUpdateView(@PathVariable int id, HttpSession session, Model model) {
 		User user = (User) session.getAttribute("user");
-		Travel travel = travelMapper.selectById(id);
+		DomesticTravel travel = domesticTravelMapper.selectById(id);
 		
 		if(user != null && travel != null) {
 			if(user.getEmail().equals(travel.getWriter())) {
@@ -93,27 +94,27 @@ public class TravelController {
 	}
 	
 	@PostMapping("/update")
-	public String postUpdate(Travel travel, HttpSession session, Model model) {
+	public String postUpdate(DomesticTravel travel, HttpSession session, Model model) {
 		User user = (User) session.getAttribute("user");
 		
 		if(user != null && travel != null) {
 			if (user.getEmail().equals(travel.getWriter())) {
-				travelMapper.update(travel);
-				return "redirect:/travelboards/view/" + travel.getId();
+				domesticTravelMapper.update(travel);
+				return "redirect:/travelboards/view/" + travel.getTbdId();
 			}
 		}
 		return "redirect:/travelboards";
 	}
 	
 	@GetMapping("/delete/{id}")
-	public String getDelete(@PathVariable long id, HttpSession session, Model model) {
+	public String getDelete(@PathVariable int id, HttpSession session, Model model) {
 		User user = (User) session.getAttribute("user");
 		
 		if(user != null) {
-			Travel travel = travelMapper.selectById(id);
+			DomesticTravel travel = domesticTravelMapper.selectById(id);
 			
 			if(user.getEmail().equals(travel.getWriter())) {
-				travelMapper.delete(id);
+				domesticTravelMapper.delete(id);
 			}
 		}
 		return "redirect:/travelboards";

@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class Payment {
-	private long id;				// ID NUMBER
+	private int payId;				// PAY_ID
 	private String name;			// NAME
 	private String email;			// EMAIL
 	private String address;			// ADDRESS
@@ -15,17 +15,19 @@ public class Payment {
 	private int expMonth;			// EXP_MONTH
 	private int expYear;			// EXP_YEAR
 	private int cvc;				// CVC
+	private int userId;				// USER_ID
 }
 
 
-//	Create table PAYMENT_BOARD(
-//	ID NUMBER(10,0) NOT NULL PRIMARY KEY,
-//	NAME VARCHAR2(20) NOT NULL,
-//	EMAIL VARCHAR2(30) NOT NULL,
-//	ADDRESS VARCHAR2(30) NOT NULL,
-//	NAME_ON_CARD VARCHAR2(20) NOT NULL,
-//	CREDITCARD_NUMBER VARCHAR2(30) NOT NULL,
-//	EXP_MONTH NUMBER NOT NULL,
-//	EXP_YEAR NUMBER NOT NULL,
-//	CVC NUMBER NOT NULL
-//	);
+// Create table PAYMENT_BOARD(
+// pay_id NUMBER(10,0) NOT NULL PRIMARY KEY,
+// name VARCHAR2(20) NOT NULL,
+// email VARCHAR2(30) NOT NULL,
+// address VARCHAR2(30) NOT NULL,
+// name_on_card VARCHAR2(20) NOT NULL,
+// creditcard_number VARCHAR2(30) NOT NULL,
+// exp_month NUMBER NOT NULL,
+// exp_year NUMBER NOT NULL,
+// cvc NUMBER NOT NULL,
+// user_id NUMBER NOT NULL
+// );

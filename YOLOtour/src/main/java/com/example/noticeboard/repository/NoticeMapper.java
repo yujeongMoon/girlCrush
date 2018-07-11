@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import com.example.noticeboard.model.Notice;
-import com.example.travelboard.model.Travel;
+import com.example.travelboard.model.DomesticTravel;
 
 @Mapper
 public interface NoticeMapper {
@@ -22,7 +22,7 @@ public interface NoticeMapper {
 	public List<Notice> selectAll();
 	
 	@Select("SELECT * FROM travel_board where id = 1")
-	public List<Travel> selectByLimit_travel();
+	public List<DomesticTravel> selectByLimit_travel();
 	
 	public Notice selectById(long id);
 	public List<Notice> selectByLimit(@Param("page") int page, @Param("size") int size);
