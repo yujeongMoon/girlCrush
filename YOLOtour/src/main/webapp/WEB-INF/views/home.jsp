@@ -25,103 +25,15 @@
 	<div class="overlay overlay-bg"></div>
 	<div class="container">
 		<div class="row fullscreen align-items-center justify-content-between">
-			<div class="col-lg-6 col-md-6 banner-left">
-				<h6 class="text-white">Away from monotonous life</h6>
-				<h1 class="text-white">Magical Travel</h1>
-				<p class="text-white">If you are looking at blank cassettes on
-					the web, you may be very confused at the difference in price. You
-					may see some for as low as $.17 each.</p>
-				<a href="#" class="primary-btn text-uppercase">Get Started</a>
-			</div>
-			<div class="col-lg-4 col-md-6 banner-right">
-				<ul class="nav nav-tabs" id="myTab" role="tablist">
-					<li class="nav-item"><a class="nav-link active"
-						id="flight-tab" data-toggle="tab" href="#flight" role="tab"
-						aria-controls="flight" aria-selected="true">Flights</a></li>
-					<li class="nav-item"><a class="nav-link" id="hotel-tab"
-						data-toggle="tab" href="#hotel" role="tab" aria-controls="hotel"
-						aria-selected="false">Hotels</a></li>
-					<li class="nav-item"><a class="nav-link" id="holiday-tab"
-						data-toggle="tab" href="#holiday" role="tab"
-						aria-controls="holiday" aria-selected="false">Holidays</a></li>
-				</ul>
-				<div class="tab-content" id="myTabContent">
-					<div class="tab-pane fade show active" id="flight" role="tabpanel"
-						aria-labelledby="flight-tab">
-						<form class="form-wrap">
-							<input type="text" class="form-control" name="name"
-								placeholder="From " onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'From '"> <input type="text"
-								class="form-control" name="to" placeholder="To "
-								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'To '"> <input type="text"
-								class="form-control date-picker" name="start"
-								placeholder="Start " onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Start '"> <input type="text"
-								class="form-control date-picker" name="return"
-								placeholder="Return " onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Return '"> <input
-								type="number" min="1" max="20" class="form-control"
-								name="adults" placeholder="Adults "
-								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Adults '"> <input
-								type="number" min="1" max="20" class="form-control" name="child"
-								placeholder="Child " onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Child '"> <a href="#"
-								class="primary-btn text-uppercase">Search flights</a>
-						</form>
-					</div>
-					<div class="tab-pane fade" id="hotel" role="tabpanel"
-						aria-labelledby="hotel-tab">
-						<form class="form-wrap">
-							<input type="text" class="form-control" name="name"
-								placeholder="From " onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'From '"> <input type="text"
-								class="form-control" name="to" placeholder="To "
-								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'To '"> <input type="text"
-								class="form-control date-picker" name="start"
-								placeholder="Start " onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Start '"> <input type="text"
-								class="form-control date-picker" name="return"
-								placeholder="Return " onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Return '"> <input
-								type="number" min="1" max="20" class="form-control"
-								name="adults" placeholder="Adults "
-								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Adults '"> <input
-								type="number" min="1" max="20" class="form-control" name="child"
-								placeholder="Child " onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Child '"> <a href="#"
-								class="primary-btn text-uppercase">Search Hotels</a>
-						</form>
-					</div>
-					<div class="tab-pane fade" id="holiday" role="tabpanel"
-						aria-labelledby="holiday-tab">
-						<form class="form-wrap">
-							<input type="text" class="form-control" name="name"
-								placeholder="From " onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'From '"> <input type="text"
-								class="form-control" name="to" placeholder="To "
-								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'To '"> <input type="text"
-								class="form-control date-picker" name="start"
-								placeholder="Start " onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Start '"> <input type="text"
-								class="form-control date-picker" name="return"
-								placeholder="Return " onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Return '"> <input
-								type="number" min="1" max="20" class="form-control"
-								name="adults" placeholder="Adults "
-								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Adults '"> <input
-								type="number" min="1" max="20" class="form-control" name="child"
-								placeholder="Child " onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Child '"> <a href="#"
-								class="primary-btn text-uppercase">Search Holidays</a>
-						</form>
-					</div>
-				</div>
+			<div class="col-lg-7 col-md-6 banner-left">
+				<h6 class="text-white">You only live once</h6>
+				<h1 class="text-white">YOLO TRAVEL</h1>
+				<p class="text-white">
+					안녕하세요. 세계적인 여행 가이드 YOLO TOUR에 오신 것을 환영합니다. <br>한 번뿐인 인생에 행복한
+					여행을 위하여 앞으로 더욱 발전하는 YOLO TOUR가 되겠습니다.<br> 잘 부탁드립니다.
+				</p>
+				<a href="travelboards" class="primary-btn text-uppercase">Take a
+					trip</a>
 			</div>
 		</div>
 	</div>
@@ -134,9 +46,8 @@
 		<div class="row d-flex justify-content-center">
 			<div class="menu-content pb-70 col-lg-8">
 				<div class="title text-center">
-					<h1 class="mb-10">Popular Destinations</h1>
-					<p>We all live in an age that belongs to the young at heart.
-						Life that is becoming extremely fast, day.</p>
+					<h1 class="mb-10">BEST 3 여행지</h1>
+					<p>2018년 YOLO TOUR 고객들이 사랑하는 여행지를 탐험해 보세요.</p>
 				</div>
 			</div>
 		</div>
@@ -187,7 +98,7 @@
 
 
 	<!-- Start price Area -->
-	<section class="price-area section-gap">
+	<!-- <section class="price-area section-gap">
 	<div class="container">
 		<div class="row d-flex justify-content-center">
 			<div class="menu-content pb-70 col-lg-8">
@@ -277,11 +188,11 @@
 		</div>
 	</div>
 	</section>
-	<!-- End price Area -->
+	End price Area -->
 
 
 	<!-- Start other-issue Area -->
-	<section class="other-issue-area section-gap">
+	<!-- <section class="other-issue-area section-gap">
 	<div class="container">
 		<div class="row d-flex justify-content-center">
 			<div class="menu-content pb-70 col-lg-9">
@@ -343,7 +254,7 @@
 			</div>
 		</div>
 	</div>
-	</section>
+	</section> -->
 	<!-- End other-issue Area -->
 
 
@@ -353,9 +264,8 @@
 		<div class="row d-flex justify-content-center">
 			<div class="menu-content pb-70 col-lg-8">
 				<div class="title text-center">
-					<h1 class="mb-10">Testimonial from our Clients</h1>
-					<p>The French Revolution constituted for the conscience of the
-						dominant aristocratic class a fall from</p>
+					<h1 class="mb-10">저희 YOLO TOUR가 사랑하는 솔직 후기</h1>
+					<p>YOLO 예약을 통해 실제 방문한 이용자가 남긴 평가입니다.</p>
 				</div>
 			</div>
 		</div>
@@ -366,10 +276,10 @@
 						<img class="img-fluid" src="img/elements/user1.png" alt="">
 					</div>
 					<div class="desc">
-						<p>Do you want to be even more successful? Learn to love
-							learning and growth. The more effort you put into improving your
-							skills, the bigger the payoff you.</p>
-						<h4>Harriet Maxwell</h4>
+						<p>행사의 도움을 받아 조금은 수월하게 신행 준비를 할 수 있었고 가이드 투어로 여행 준비의 부족함을 채울 수
+							있었으며 체력적으로도 좀 더 편했기 때문이다. 정말 장점과 단점이 공존했던 신혼여행 반패키지. 하지만 나보다 좀 더
+							빠릿하고 바지런하게 결혼준비 할 수 있는 분들이라면 자유여행으로 떠나기를 추천하고 싶다.</p>
+						<h4>좡좡</h4>
 						<div class="star">
 							<span class="fa fa-star checked"></span> <span
 								class="fa fa-star checked"></span> <span
@@ -383,10 +293,9 @@
 						<img class="img-fluid" src="img/elements/user2.png" alt="">
 					</div>
 					<div class="desc">
-						<p>A purpose is the eternal condition for success. Every
-							former smoker can tell you just how hard it is to stop smoking
-							cigarettes. However.</p>
-						<h4>Carolyn Craig</h4>
+						<p>해외국제여행사는 친절함은 확실한 것 같다. 마지막 순간까지 친절하게 잘 도와준 한국어담당 직원분과 현지에서
+							통역해준 일행분께 매우 고마운 마음이 든다!!</p>
+						<h4>동동이</h4>
 						<div class="star">
 							<span class="fa fa-star checked"></span> <span
 								class="fa fa-star checked"></span> <span
@@ -400,10 +309,9 @@
 						<img class="img-fluid" src="img/elements/user1.png" alt="">
 					</div>
 					<div class="desc">
-						<p>Do you want to be even more successful? Learn to love
-							learning and growth. The more effort you put into improving your
-							skills, the bigger the payoff you.</p>
-						<h4>Harriet Maxwell</h4>
+						<p>뭐 그런 로맨틱룸은 아니였지만 나름 만족하는 숙소였음 YOLO여행사 이사님이 가성비로 추천하는이유가
+							있었구만^^</p>
+						<h4>딸기새댁</h4>
 						<div class="star">
 							<span class="fa fa-star checked"></span> <span
 								class="fa fa-star checked"></span> <span
@@ -417,10 +325,8 @@
 						<img class="img-fluid" src="img/elements/user2.png" alt="">
 					</div>
 					<div class="desc">
-						<p>A purpose is the eternal condition for success. Every
-							former smoker can tell you just how hard it is to stop smoking
-							cigarettes. However.</p>
-						<h4>Carolyn Craig</h4>
+						<p>차없고 시간없는 분들에게 잠깐 잠깐 당일치기로 힐링하기에 정말 딱 좋은 패키지여행이라고 생각됩니다.</p>
+						<h4>보보스</h4>
 						<div class="star">
 							<span class="fa fa-star checked"></span> <span
 								class="fa fa-star checked"></span> <span
@@ -434,10 +340,11 @@
 						<img class="img-fluid" src="img/elements/user1.png" alt="">
 					</div>
 					<div class="desc">
-						<p>Do you want to be even more successful? Learn to love
-							learning and growth. The more effort you put into improving your
-							skills, the bigger the payoff you.</p>
-						<h4>Harriet Maxwell</h4>
+						<p>안녕하세요~ 저는 5월초에 친구와 함께 욜로투어를 통해서 로키투어를 다녀왔어요 어느덧 몇주가 지났는데도
+							계속 기억에 남아 후기를 써볼까 합니다 ㅎㅎ 투어 상품을 이용하실 때 고민들 많이 하실거 같은데요 저희는 캐나다
+							서부에서 단연 1등인 욜로투어를 선택했습니다. 여행일정 구성이나 가격면에서 타사와 비교해보고 알아본 뒤 욜로투어가
+							저희에게 가장 와닿았구요 실제로 이용해본 결과도 그랬습니다.</p>
+						<h4>dyffh</h4>
 						<div class="star">
 							<span class="fa fa-star checked"></span> <span
 								class="fa fa-star checked"></span> <span
@@ -451,10 +358,9 @@
 						<img class="img-fluid" src="img/elements/user2.png" alt="">
 					</div>
 					<div class="desc">
-						<p>A purpose is the eternal condition for success. Every
-							former smoker can tell you just how hard it is to stop smoking
-							cigarettes. However.</p>
-						<h4>Carolyn Craig</h4>
+						<p>신혼여행을 동남아로 생각 하시는 분들이 계시다면 한누리 여행사를 추천 드려요^^ 다만, 동남아가 아닌 기타
+							지역을 방문하실 계획이라면 저희는 다른 여행사를 추천드리고 싶네요...</p>
+						<h4>데이지</h4>
 						<div class="star">
 							<span class="fa fa-star checked"></span> <span
 								class="fa fa-star checked"></span> <span
@@ -474,17 +380,14 @@
 	<div class="container-fluid">
 		<div class="row align-items-center justify-content-end">
 			<div class="col-lg-6 col-md-12 home-about-left">
-				<h1>
-					Did not find your Package? <br> Feel free to ask us. <br>
-					We‘ll make it for you
-				</h1>
-				<p>inappropriate behavior is often laughed off as “boys will be
-					boys,” women face higher conduct standards especially in the
-					workplace. That’s why it’s crucial that, as women, our behavior on
-					the job is beyond reproach. inappropriate behavior is often
-					laughed.</p>
-				<a href="#" class="primary-btn text-uppercase">request custom
-					price</a>
+				<h3>혹시 마음에 드는 여행상품을 찾지 못하셨나요?</h3>
+				<br>
+				<h4>어서 저희에게 연락해서 알려주세요.</h4>
+				<br>
+				<h3>최고의 여행을 선사해드리겠습니다!</h3>
+				<p>다른 여행사에서 고생하시지 말고 서둘러서 연락 부탁드려요. 최고의 서비스로 언제나 노력하는 YOLO TOUR!
+					YOU ONLY LIVE ONCE! 당신의 인생은 한 번뿐이예요!</p>
+				<h2>1234-1234</h2>
 			</div>
 			<div class="col-lg-6 col-md-12 home-about-right no-padding">
 				<img class="img-fluid" src="img/about-img.jpg" alt="">
@@ -496,7 +399,7 @@
 
 
 	<!-- Start blog Area -->
-	<section class="recent-blog-area section-gap">
+	<!-- <section class="recent-blog-area section-gap">
 	<div class="container">
 		<div class="row d-flex justify-content-center">
 			<div class="menu-content pb-60 col-lg-9">
@@ -617,7 +520,7 @@
 			</div>
 		</div>
 	</div>
-	</section>
+	</section> -->
 	<!-- End recent-blog Area -->
 
 	<!-- start footer Area -->

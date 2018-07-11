@@ -1,4 +1,4 @@
-package com.example.user.repository;
+package com.example.emp.repository;
 
 import java.util.List;
 
@@ -9,36 +9,34 @@ import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
-
 import org.apache.ibatis.annotations.Update;
 
-import com.example.user.model.User;
+import com.example.emp.model.Emp;
 
 @Mapper
-public interface UserMapper {
+public interface EmpMapper {
 	
-	@Insert("INSERT INTO customer(id, email, password) VALUES(ID_USER.NEXTVAL, #{email}, #{password})")
-	public int insert(User user);
+	@Insert("INSERT INTO YOLO_EMP(yoloId, email, password) VALUES(ID_YOLO_EMP.NEXTVAL, #{email}, #{password})")
+	public int insert(Emp emp);
 
-	@Update("UPDATE customer SET password = #{password} WHERE email = #{email}")
-	public int update(User user);
+	@Update("UPDATE YOLO_EMP SET password = #{password} WHERE email = #{email}")
+	public int update(Emp emp);
 
-	@Delete("DELETE FROM customer WHERE email = #{email}")
-	public int delete(String email);
+	@Delete("DELETE FROM YOLO_EMP WHERE email = #{email}")
+	public int delete(Emp emp);
 
-	@Select("SELECT COUNT(*) FROM customer")
+	@Select("SELECT COUNT(*) FROM YOLO_EMP")
 	public int count();
 
-	@Select("SELECT * FROM customer ORDER BY email ASC")
+	@Select("SELECT * FROM YOLO_EMP ORDER BY email ASC")
 	// 생략이 가능하다. 생략하면 아래 선언이 있는 것처럼 작동한다.
-	@ResultType(User.class) 
-	public List<User> selectAll();
+	@ResultType(Emp.class) 
+	public List<Emp> selectAll();
 
-	@Select("SELECT * FROM customer WHERE email = #{email}")
+	@Select("SELECT * FROM YOLO_EMP WHERE email = #{email}")
 	// 선언해 놓으면 다른 메소드에서 @ResultMap("userResultMap") 선언으로 이용할 수 있다.
 	@Results(id = "userResultMap", value = { 
 			@Result(property = "email", column = "email"),
 			@Result(property = "password", column = "password") })
-	public User selectByEmail(String email);
-	
+	public Emp selectByEmail(String email);
 }
