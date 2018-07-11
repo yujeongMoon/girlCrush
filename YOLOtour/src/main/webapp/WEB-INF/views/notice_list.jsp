@@ -126,7 +126,12 @@
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
 	<c:import url="footer.jsp"></c:import>
+<<<<<<< HEAD
 	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+=======
+	
+		<script src="js/vendor/jquery-2.2.4.min.js"></script>
+>>>>>>> 19ca785446660e72a4803989c302637e5c466f6b
 	<script src="js/popper.min.js"></script>
 	<script src="js/vendor/bootstrap.min.js"></script>
 	<script
