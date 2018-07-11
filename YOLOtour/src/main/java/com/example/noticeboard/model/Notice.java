@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 public class Notice {
-	int id; // id(순서)
+	int noticeId; // id(순서)
 	String writer; // 글쓴이
 	String title; // 제목
 	String content; // 내용
