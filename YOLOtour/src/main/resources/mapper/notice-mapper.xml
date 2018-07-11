@@ -5,7 +5,7 @@
 	<!-- type="스프링이름" id="별명" -->
 	<!-- <result property="스프링" column="DB이름" /> -->
 	<resultMap type="com.example.noticeboard.model.Notice" id="NoticeResultMap">
-		<result property="id" column="ID" />
+		<result property="noticeId" column="NOTICE_ID" />
 		<result property="writer" column="WRITER" />
 		<result property="title" column="TITLE" />
 		<result property="content" column="CONTENT" />
@@ -15,22 +15,21 @@
 	
 	<!-- insert, update, delete 작업은 영향 받은 로우의 개수를 값을 자동으로 리턴한다. -->
 	<insert id="insert" parameterType="com.example.noticeboard.model.Notice">
-		INSERT INTO NOTICE_BOARD(id, writer, title, content, reg_date, hit_count)
-		VALUES(ID_SEQ_NOTICE.NEXTVAL, #{writer}, #{title}, #{content}, SYSDATE, 0)
+		INSERT INTO NOTICE_BOARD(notice_id, writer, title, content, reg_date, hit_count)
+		VALUES(ID_NOTICE.NEXTVAL, #{writer}, #{title}, #{content}, SYSDATE, 0)
 	</insert>
 	
 	<update id="update" parameterType="com.example.noticeboard.model.Notice">
-		UPDATE NOTICE_BOARD SET title=#{title}, content=#{content} WHERE id=#{id}
+		UPDATE NOTICE_BOARD SET title=#{title}, content=#{content} WHERE notice_id=#{noticeId}
 	</update>
 	
 	<delete id="delete" parameterType="long">
-		DELETE FROM NOTICE_BOARD WHERE id=#{id}
+		DELETE FROM NOTICE_BOARD WHERE notice_id=#{noticeId}
 	</delete>
 	
-	
-	
+
 	<select id="selectById" parameterType="long" resultMap="NoticeResultMap">
-		SELECT * FROM NOTICE_BOARD WHERE id=#{id}
+		SELECT * FROM NOTICE_BOARD WHERE notice_id=#{noticeId}
 	</select>
 	
 	<!-- Collection 처리는 자동으로 지원한다. resultType 자동 바인딩-->
@@ -40,13 +39,13 @@
 		<bind name="end" value="@com.example.Pager@seekEnd(page, size)"/>
 		SELECT * FROM (
 			SELECT ROWNUM AS rnum, b.* FROM (
-				SELECT * FROM NOTICE_BOARD ORDER BY id DESC
+				SELECT * FROM NOTICE_BOARD ORDER BY notice_id DESC
 			) b
 		) WHERE rnum &gt;= #{start} and rnum &lt;= #{end}
 	</select>
 	
 	<update id="increment">
-		UPDATE NOTICE_BOARD SET hit_count=hit_count+1 WHERE id=#{id} and writer!=#{requester}
+		UPDATE NOTICE_BOARD SET hit_count=hit_count+1 WHERE notice_id=#{noticeId} and writer!=#{requester}
 	</update>
 	
 </mapper>

@@ -37,6 +37,7 @@
 <link rel="stylesheet" type="text/css" href="login/css/main.css">
 <!--===============================================================================================-->
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
 <script type="text/javascript">
 	$(function() {
 		$('.message a').click(function() {
@@ -53,8 +54,6 @@
 <body>
 
 	<c:import url="nav_top.jsp"></c:import>
-
-
 
 	<div class="container-login100"
 		style="background-image: url('images/bg-01.jpg');">
@@ -90,7 +89,7 @@
 						</div>
 
 						<div class="text-center">
-							<p class="message"><a href="#" class="txt2 hov1"> Register </a></p>
+							<p class="message"><a class="txt2 hov1"> Register </a></p>
 						</div>
 					</form>
 
@@ -119,7 +118,7 @@
 
 						<div class="text-center">
 							<p class="message">
-								<a href="#" class="txt2 hov1"> Login </a>
+								<a class="txt2 hov1"> Login </a>
 							</p>
 						</div>
 					</form>
@@ -168,5 +167,21 @@
 	<!--===============================================================================================-->
 	<script src="login/js/main.js"></script>
 	<c:import url="footer.jsp"></c:import>
+	
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/easing.min.js"></script>
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

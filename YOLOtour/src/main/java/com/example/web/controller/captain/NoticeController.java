@@ -40,15 +40,15 @@ public class NoticeController {
 		return mav;
 	}
 	
-	@GetMapping("/view/{id}")
-	public String getNoticeView(@PathVariable long id, HttpSession session, Model model) {
+	@GetMapping("/view/{noticeId}")
+	public String getNoticeView(@PathVariable long noticeId, HttpSession session, Model model) {
 		User user = (User) session.getAttribute("user");
 		if(user == null) {
 			return "redirect:/login";
 		}
 		
-		noticeMapper.increment(id, user.getEmail());
-		model.addAttribute("notice", noticeMapper.selectById(id));
+		noticeMapper.increment(noticeId, user.getEmail());
+		model.addAttribute("notice", noticeMapper.selectById(noticeId));
 		return "notice_view";
 	}
 	
@@ -75,10 +75,10 @@ public class NoticeController {
 		return "redirect:/notices";
 	}
 	
-	@GetMapping("/update/{id}")
-	public String getUpdateView(@PathVariable long id, HttpSession session, Model model ) {
+	@GetMapping("/update/{noticeId}")
+	public String getUpdateView(@PathVariable long noticeId, HttpSession session, Model model ) {
 		User user = (User) session.getAttribute("user");
-		Notice notice = noticeMapper.selectById(id);
+		Notice notice = noticeMapper.selectById(noticeId);
 		
 		if(user != null && notice != null) {
 			if(user.getEmail().equals(notice.getWriter())) {
@@ -96,21 +96,21 @@ public class NoticeController {
 		if(user != null && notice != null) {
 			if(user.getEmail().equals(notice.getWriter())) {
 				noticeMapper.update(notice);
-				return "redirect:/notices/view/" + notice.getId();
+				return "redirect:/notices/view/" + notice.getNoticeId();
 			}
 		}
 		return "redirect:/notices";
 	}
 	
-	@GetMapping("/delete/{id}")
-	public String getDelete(@PathVariable long id, HttpSession session, Model model) {
+	@GetMapping("/delete/{noticeId}")
+	public String getDelete(@PathVariable long noticeId, HttpSession session, Model model) {
 		User user = (User) session.getAttribute("user");
 		
 		if(user != null) {
-			Notice notice = noticeMapper.selectById(id);
+			Notice notice = noticeMapper.selectById(noticeId);
 			
 			if(user.getEmail().equals(notice.getWriter())) {
-				noticeMapper.delete(id);
+				noticeMapper.delete(noticeId);
 			}
 		}
 		return "redirect:/notices";
